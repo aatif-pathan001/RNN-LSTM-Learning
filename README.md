@@ -1,61 +1,197 @@
-# RNN & LSTM Deep Learning Journey
+# RNN & LSTM Learning Journey
 
-## Overview
-This repository documents my learning journey with Recurrent Neural Networks and LSTMs, from theory to implementation.
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
-## Projects
+## 🎯 Overview
+
+This repository documents my learning journey with Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) networks. Starting from theoretical foundations to practical implementations in PyTorch.
+
+**Duration**: Week 1 of my ML Learning Challenge (Feb 13-19, 2026)
+
+## 📚 Learning Objectives
+
+- [x] Understand RNN architecture and sequential data processing
+- [ ] Implement character-level RNN from scratch
+- [ ] Master LSTM architecture (gates and cell states)
+- [ ] Compare RNN vs LSTM performance
+- [ ] Build sentiment analysis system with LSTM
+- [ ] Create stock price predictor using LSTM
+
+## 🗂️ Repository Structure
+
+```
+RNN-LSTM-Learning/
+├── README.md
+├── theory/
+│   └── notes.md           # Theoretical concepts and math
+├── simple_rnn/
+│   ├── char_rnn.py       # Character-level RNN implementation
+│   └── text_generator.py # Text generation using RNN
+├── lstm/
+│   ├── lstm_impl.py      # LSTM implementation
+│   ├── sentiment.py      # Sentiment analysis
+│   └── stock_pred.py     # Stock price prediction
+└── results/
+    ├── training_curves/   # Loss and accuracy plots
+    └── samples/           # Generated text samples
+```
+
+## 📖 Projects
 
 ### 1. Simple Character-Level RNN
-- **Objective**: Understand basic RNN architecture
-- **Dataset**: Text corpus (Shakespeare/books)
-- **Results**: [Loss curves, generated samples]
-- **Code**: `simple_rnn.py`
+**Status**: 🔄 In Progress
 
-### 2. LSTM Text Generator
-- **Objective**: Compare RNN vs LSTM
-- **Improvements**: Better long-term dependencies
-- **Code**: `lstm_implementation.py`
+**Objective**: Understand basic RNN architecture by implementing text generation.
 
-### 3. Sentiment Analysis (LSTM)
-- **Dataset**: IMDB or Twitter sentiment
-- **Accuracy**: [Your results]
-- **Code**: `sentiment_analysis.py`
+**Approach**:
+- Load text corpus (Shakespeare/books)
+- Build simple RNN in PyTorch
+- Train character-by-character prediction
+- Generate text samples
 
-### 4. Stock Price Predictor
-- **Architecture**: Multi-layer LSTM
-- **Features**: Technical indicators
-- **Demo**: [Link to Gradio/Streamlit app]
-- **Code**: `stock_price_predictor/`
-
-## What I Learned
-
-### Technical Concepts:
-- Sequential data processing
-- Hidden state and cell state
-- Vanishing gradient problem
-- LSTM gates (forget, input, output)
-
-### Implementation Skills:
-- PyTorch RNN/LSTM modules
-- Sequence data preprocessing
-- Training loops for sequential models
-- Text generation sampling
-
-### Challenges Overcome:
-1. [Challenge 1]: [How you solved it]
-2. [Challenge 2]: [Solution]
-
-## Resources Used
-- [Andrej Karpathy's Blog](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-- [colah's Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-- PyTorch Documentation
-
-## Next Steps
-- [ ] Implement GRU and compare with LSTM
-- [ ] Build bidirectional LSTM
-- [ ] Try attention mechanisms
+**Expected Learnings**:
+- Hidden state mechanics
+- Sequence processing
+- Vanishing gradient challenges
 
 ---
 
-**Author**: Aatif Khan Pathan
-**Duration**: Week 1 of ML Learning Journey
+### 2. LSTM Text Generator
+**Status**: ⏳ Planned
+
+**Objective**: Compare LSTM vs simple RNN for text generation.
+
+**Approach**:
+- Implement LSTM with forget/input/output gates
+- Train on same corpus as RNN
+- Compare generation quality
+- Analyze learning curves
+
+**Expected Learnings**:
+- How gates solve vanishing gradient
+- Cell state vs hidden state
+- Long-term dependency handling
+
+---
+
+### 3. Sentiment Analysis with LSTM
+**Status**: ⏳ Planned
+
+**Objective**: Build practical NLP application using LSTM.
+
+**Dataset**: IMDB Movie Reviews or Twitter Sentiment
+
+**Approach**:
+- Preprocess text data
+- Build LSTM classifier
+- Train with proper validation
+- Evaluate on test set
+
+**Target Accuracy**: 85%+
+
+---
+
+### 4. Stock Price Predictor
+**Status**: ⏳ Planned
+
+**Objective**: Apply LSTM to time-series forecasting.
+
+**Features**:
+- Historical stock prices
+- Technical indicators
+- Volume data
+
+**Approach**:
+- Multi-step prediction
+- LSTM with multiple layers
+- Gradio interface for demo
+
+**Deployment**: HuggingFace Spaces
+
+---
+
+## 📊 Results
+
+### Training Progress
+
+| Project | Status | Accuracy/Loss | Training Time |
+|---------|--------|--------------|---------------|
+| Simple RNN | In Progress | - | - |
+| LSTM Text Gen | Planned | - | - |
+| Sentiment Analysis | Planned | - | - |
+| Stock Predictor | Planned | - | - |
+
+### Generated Samples
+
+*Coming soon - Will add text samples generated by trained models*
+
+---
+
+## 🧠 Key Concepts Learned
+
+### RNN Fundamentals
+- **Sequential Processing**: How RNN processes data one step at a time
+- **Hidden State**: The "memory" that persists across time steps
+- **Parameter Sharing**: Same weights across all time steps
+- **Backpropagation Through Time (BPTT)**: How gradients flow backward
+
+### LSTM Improvements
+- **Forget Gate**: Decides what to remove from cell state
+- **Input Gate**: Decides what new information to add
+- **Output Gate**: Decides what to output based on cell state
+- **Cell State**: Long-term memory pathway
+
+### Practical Insights
+- When to use RNN vs LSTM
+- Hyperparameter tuning for sequence models
+- Handling variable-length sequences
+- Gradient clipping techniques
+
+---
+
+## 🛠️ Technologies Used
+
+- **PyTorch**: Deep learning framework
+- **NumPy**: Numerical computations
+- **Matplotlib**: Visualization
+- **Pandas**: Data manipulation (for stock data)
+
+---
+
+## 📚 Resources
+
+### Theory
+- [Andrej Karpathy - The Unreasonable Effectiveness of RNNs](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+- [colah's Blog - Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+- [PyTorch RNN Tutorial](https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html)
+
+### Papers
+- *Coming soon*
+
+### Courses
+- fast.ai Practical Deep Learning
+- PyTorch Official Tutorials
+
+---
+
+**Future Enhancements**:
+- [ ] Try GRU (Gated Recurrent Unit)
+- [ ] Implement bidirectional LSTM
+- [ ] Experiment with attention mechanisms
+- [ ] Build sequence-to-sequence model
+
+---
+
+## 🤝 Connect
+
+This is part of my 30-day ML learning challenge. Follow my journey:
+
+- **GitHub**: [@aatif-pathan001](https://github.com/aatif-pathan001)
+- **LinkedIn**: [Aatif Khan Pathan](https://linkedin.com/in/aatif-khan-pathan)
+- **Learning Journal**: [30-Days-ML-Challenge](https://github.com/aatif-pathan001/30-Days-ML-Challenge)
+
+---
+
+**Author**: Aatif Khan Pathan  
+**Started**: February 13, 2026  
