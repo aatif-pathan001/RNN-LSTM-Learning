@@ -12,7 +12,7 @@ This repository documents my learning journey with Recurrent Neural Networks (RN
 ## 📚 Learning Objectives
 
 - [x] Understand RNN architecture and sequential data processing
-- [ ] Implement character-level RNN from scratch
+- [x] Implement character-level RNN from scratch
 - [ ] Master LSTM architecture (gates and cell states)
 - [ ] Compare RNN vs LSTM performance
 - [ ] Build sentiment analysis system with LSTM
